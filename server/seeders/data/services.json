@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Custom AI Model Development",
+    "description": "We create and refine AI models specifically for your business needs, turning general technology into targeted tools that understand your industry.",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\"/></svg>",
+    "capabilities": [
+      "Gather and prepare your data securely and efficiently",
+      "Build tailored solutions for prediction, automation, and analytics",
+      "Train and optimize for accuracy, speed, and cost control",
+      "Launch and support with integration and ongoing monitoring"
+    ],
+    "metric": "20-50% efficiency gains in decision-making and operations; over 33% error reduction in automotive QA.",
+    "order": 1
+  },
+  {
+    "title": "Smart Information Retrieval",
+    "description": "We build intelligent retrieval systems that surface precise, up-to-date insights from large data estates without manual searching.",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"M21 21l-4.35-4.35\"/><path d=\"M11 8v6M8 11h6\"/></svg>",
+    "capabilities": [
+      "Organize your knowledge base with secure, usable structure",
+      "Handle queries with hybrid retrieval for precision",
+      "Blend retrieval with AI responses for trustworthy answers",
+      "Scale and refine performance with reliability checks"
+    ],
+    "metric": "Up to 40% fewer errors in information-heavy workflows; faster fintech compliance turnarounds.",
+    "order": 2
+  },
+  {
+    "title": "Intelligent Workflow Automation",
+    "description": "We orchestrate specialized AI agents to automate complex cross-functional workflows with quality controls and continuous improvement.",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83\"/></svg>",
+    "capabilities": [
+      "Design specialized agents for each process role",
+      "Coordinate interactions for seamless execution",
+      "Execute and adapt with built-in quality checks",
+      "Integrate with existing tools under strong security"
+    ],
+    "metric": "30-60% faster operations; improved supply chain throughput and planning efficiency in manufacturing.",
+    "order": 3
+  }
+]

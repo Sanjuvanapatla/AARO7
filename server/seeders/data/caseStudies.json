@@ -1,0 +1,215 @@
+[
+  {
+    "industry": "Automotive",
+    "title": "Autonomous Visual Defect Detection System",
+    "subtitle": "End-to-end computer vision pipeline for real-time quality assurance on high-speed automotive production lines.",
+    "timeline": "12 weeks from pilot to multi-plant rollout",
+    "architectureSnapshot": "Edge computer-vision inference across production cells with centralized model monitoring and federated update loops.",
+    "techStack": ["PyTorch", "NVIDIA Jetson", "OpenCV", "Kafka", "MLflow"],
+    "headlineMetrics": [
+      { "value": "97.3%", "description": "Detection Accuracy" },
+      { "value": "45%", "description": "Defect Reduction" }
+    ],
+    "phases": [
+      {
+        "number": 1,
+        "label": "Problem",
+        "content": "Legacy manual inspection could not keep pace with production speed. Defect escape rates exceeded 8%, causing costly downstream failures and warranty claims. The client needed sub-second detection across 12 defect categories.",
+        "items": []
+      },
+      {
+        "number": 2,
+        "label": "Architecture",
+        "content": "",
+        "items": [
+          "Custom CNN architecture with attention mechanisms",
+          "Edge deployment on NVIDIA Jetson fleet",
+          "Real-time inference pipeline (<200ms)",
+          "Federated learning for cross-plant model updates"
+        ]
+      },
+      {
+        "number": 3,
+        "label": "Implementation",
+        "content": "",
+        "items": [
+          "Synthetic data augmentation for rare defect classes",
+          "Model distillation for edge-optimized inference",
+          "Integration with existing SCADA and MES systems",
+          "Automated retraining on new defect patterns"
+        ]
+      },
+      {
+        "number": 4,
+        "label": "Impact",
+        "content": "",
+        "items": [
+          "97.3% defect detection accuracy (from 72%)",
+          "45% reduction in escape defects",
+          "$2.4M annual warranty cost savings",
+          "Deployed across 4 production facilities"
+        ]
+      }
+    ],
+    "order": 1
+  },
+  {
+    "industry": "Fintech",
+    "title": "Regulatory Compliance Retrieval Engine",
+    "subtitle": "RAG-powered intelligent compliance system enabling instant retrieval and interpretation of regulatory requirements across jurisdictions.",
+    "timeline": "10-week implementation with phased jurisdiction onboarding",
+    "architectureSnapshot": "Hybrid retrieval architecture with legal-domain embeddings, re-ranking, and citation-backed generation under role-based controls.",
+    "techStack": ["LlamaIndex", "Elasticsearch", "pgvector", "FastAPI", "PostgreSQL"],
+    "headlineMetrics": [
+      { "value": "40%", "description": "Faster Compliance Reviews" },
+      { "value": "38%", "description": "Error Reduction" }
+    ],
+    "phases": [
+      {
+        "number": 1,
+        "label": "Problem",
+        "content": "A multinational fintech needed to navigate 15,000+ regulatory documents across 23 jurisdictions. Compliance teams spent 60% of their time on manual document review, leading to slow product launches and compliance gaps.",
+        "items": []
+      },
+      {
+        "number": 2,
+        "label": "Architecture",
+        "content": "",
+        "items": [
+          "Multi-stage RAG pipeline with hybrid retrieval",
+          "Domain-tuned embedding model for legal text",
+          "Cross-encoder re-ranking with source attribution",
+          "Jurisdictional metadata filtering layer"
+        ]
+      },
+      {
+        "number": 3,
+        "label": "Implementation",
+        "content": "",
+        "items": [
+          "Regulatory document ingestion pipeline (PDF, HTML, XML)",
+          "Semantic chunking with legal hierarchy preservation",
+          "Citation-backed response generation",
+          "Role-based access control and audit logging"
+        ]
+      },
+      {
+        "number": 4,
+        "label": "Impact",
+        "content": "",
+        "items": [
+          "40% faster compliance review cycles",
+          "38% reduction in compliance interpretation errors",
+          "85% user adoption within first quarter",
+          "Scaled to cover 4 new jurisdictions in 2 weeks"
+        ]
+      }
+    ],
+    "order": 2
+  },
+  {
+    "industry": "Manufacturing",
+    "title": "Autonomous Supply Chain Orchestration",
+    "subtitle": "Multi-agent system for intelligent supply chain management - from demand forecasting to automated procurement and logistics optimization.",
+    "timeline": "14-week rollout across procurement and logistics operations",
+    "architectureSnapshot": "MCP-orchestrated agent network coordinating forecasting, procurement actions, and logistics decisions with human-in-the-loop safeguards.",
+    "techStack": ["MCP", "LangGraph", "Temporal", "Kafka", "Snowflake"],
+    "headlineMetrics": [
+      { "value": "52%", "description": "Faster Throughput" },
+      { "value": "28%", "description": "Inventory Cost Reduction" }
+    ],
+    "phases": [
+      {
+        "number": 1,
+        "label": "Problem",
+        "content": "Complex multi-tier supply chain with 200+ suppliers across 8 countries. Demand forecasting errors of 25%+ caused overstock and stockout cycles. Manual coordination consumed 40+ hours per week across procurement teams.",
+        "items": []
+      },
+      {
+        "number": 2,
+        "label": "Architecture",
+        "content": "",
+        "items": [
+          "MCP-orchestrated multi-agent ecosystem",
+          "Demand forecasting agent (time-series + external signals)",
+          "Procurement agent with automated supplier negotiation",
+          "Logistics optimization agent with constraint solver"
+        ]
+      },
+      {
+        "number": 3,
+        "label": "Implementation",
+        "content": "",
+        "items": [
+          "Integration with ERP, WMS, and TMS platforms",
+          "Real-time data streams from IoT sensor network",
+          "Human-in-the-loop approval for high-value decisions",
+          "Continuous learning from outcome feedback loops"
+        ]
+      },
+      {
+        "number": 4,
+        "label": "Impact",
+        "content": "",
+        "items": [
+          "52% faster procurement-to-delivery throughput",
+          "28% reduction in inventory carrying costs",
+          "Demand forecast accuracy improved to 91%",
+          "35 hours/week saved in manual coordination"
+        ]
+      }
+    ],
+    "order": 3
+  },
+  {
+    "industry": "Healthcare",
+    "title": "Clinical Knowledge Retrieval and Triage Assist",
+    "subtitle": "Secure retrieval and triage support system that reduced response time for clinical protocol queries.",
+    "timeline": "9-week deployment for two care networks",
+    "architectureSnapshot": "Policy-aware retrieval with role-gated access and clinician-in-the-loop response validation.",
+    "techStack": ["LangChain", "Qdrant", "Azure OpenAI", "FHIR APIs", "Grafana"],
+    "headlineMetrics": [
+      { "value": "34%", "description": "Faster Protocol Retrieval" },
+      { "value": "27%", "description": "Documentation Overhead Reduction" }
+    ],
+    "phases": [
+      {
+        "number": 1,
+        "label": "Problem",
+        "content": "Care teams spent excessive time navigating protocol and policy documents spread across systems, delaying time-sensitive decisions.",
+        "items": []
+      },
+      {
+        "number": 2,
+        "label": "Architecture",
+        "content": "",
+        "items": [
+          "Clinical-policy retrieval layer with role controls",
+          "Triage assistant with confidence and citation display",
+          "Audit-ready logging for all query-response cycles"
+        ]
+      },
+      {
+        "number": 3,
+        "label": "Implementation",
+        "content": "",
+        "items": [
+          "Secure ingestion of policy and care pathway documents",
+          "Structured chunking to preserve medical context",
+          "Workflow integration into existing clinical portals"
+        ]
+      },
+      {
+        "number": 4,
+        "label": "Impact",
+        "content": "",
+        "items": [
+          "34% faster protocol retrieval",
+          "27% reduction in documentation overhead",
+          "Improved consistency in protocol adherence"
+        ]
+      }
+    ],
+    "order": 4
+  }
+]

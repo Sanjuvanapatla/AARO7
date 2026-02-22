@@ -1,0 +1,18 @@
+{
+  "companyName": "AARO7 Fintech Pvt Ltd",
+  "tagline": "We don't just prompt the future; we architect it.",
+  "vision": "To be the world's most versatile architecture for intelligence, mastering every layer of the AI stack to turn frontier technology into industrial reality.",
+  "mission": "Our mission is to bridge the global AI Deployment Gap by mastering the full lifecycle of implementation. From training and fine-tuning foundational models to architecting RAG systems and orchestrating agentic ecosystems via MCP, we resolve technical debt and build the high-performance intelligence layer for any industry, in any domain.",
+  "email": "contact@aaro7.com",
+  "headquarters": "AARO7 Fintech Pvt Ltd",
+  "responseTime": "Within 24 business hours",
+  "footerDescription": "End-to-end AI engineering hub mastering the full stack - from foundational models to agentic orchestration.",
+  "heroSubtitle": "AARO7 is an end-to-end AI engineering hub that closes the gap between raw model potential and industrial execution.",
+  "heroBody": "We master the full AI stack - from foundational model fine-tuning to RAG architectures and agentic orchestration via MCP - building high-performance intelligence layers for any industry.",
+  "heroMetrics": [
+    { "value": 50, "suffix": "%+", "label": "Efficiency Gains" },
+    { "value": 33, "suffix": "%+", "label": "Error Reduction" },
+    { "value": 60, "suffix": "%", "label": "Faster Throughput" }
+  ],
+  "copyrightYear": 2026
+}

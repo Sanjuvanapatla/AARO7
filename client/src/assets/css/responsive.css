@@ -1,0 +1,179 @@
+@media (max-width: 1360px) {
+  .nav__links {
+    gap: 0.85rem;
+  }
+
+  .nav__link {
+    font-size: 0.8125rem;
+  }
+
+  .nav__cta {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .industries-grid,
+  .why-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--4,
+  .grid--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .capability-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .capability-section--reverse {
+    direction: ltr;
+  }
+
+  .case-study__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .case-study__phase {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .case-study__phase:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .nav__links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 14, 26, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 999;
+  }
+
+  .nav__links--open {
+    display: flex;
+  }
+
+  .nav__links .nav__link {
+    font-size: 1.125rem;
+  }
+
+  .nav__mobile-toggle {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .nav__cta--desktop {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 8rem 0 4rem;
+  }
+
+  .hero__metrics {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .vision-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--5 {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study__header {
+    flex-direction: column;
+  }
+
+  .case-study__body {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study__phase {
+    border-right: none;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .assessment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__label {
+    font-size: 0.6875rem;
+  }
+}

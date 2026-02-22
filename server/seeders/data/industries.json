@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Fintech",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6\"/></svg>",
+    "order": 1
+  },
+  {
+    "name": "Automotive",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 6v6l4 2\"/></svg>",
+    "order": 2
+  },
+  {
+    "name": "Healthcare",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><path d=\"M22 12h-4l-3 9L9 3l-3 9H2\"/></svg>",
+    "order": 3
+  },
+  {
+    "name": "Manufacturing",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><path d=\"M2 20h20M5 20V10l7-6 7 6v10M9 20v-6h6v6\"/></svg>",
+    "order": 4
+  },
+  {
+    "name": "Enterprise Operations",
+    "iconSvg": "<svg viewBox=\"0 0 24 24\"><rect x=\"2\" y=\"3\" width=\"20\" height=\"14\" rx=\"2\"/><path d=\"M8 21h8M12 17v4\"/></svg>",
+    "order": 5
+  }
+]

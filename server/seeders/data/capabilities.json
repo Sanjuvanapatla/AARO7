@@ -1,0 +1,84 @@
+[
+  {
+    "layerNumber": 1,
+    "sectionId": "models",
+    "title": "AI Lifecycle Mastery",
+    "paragraphs": [
+      "We own every phase of the AI development lifecycle — from raw data ingestion through model deployment and continuous optimization. No handoffs. No gaps. Complete architectural control.",
+      "Our approach treats AI development as an engineering discipline, not an experiment. Every model is built with production-grade rigor, monitored performance baselines, and iterative refinement loops."
+    ],
+    "technologies": ["PyTorch", "TensorFlow", "Hugging Face", "ONNX", "MLflow", "Weights & Biases", "CUDA", "vLLM"],
+    "stages": [
+      { "label": "Ingest", "content": "Data Engineering & Preparation Pipeline" },
+      { "label": "Train", "content": "Foundational Model Fine-Tuning & LoRA" },
+      { "label": "Validate", "content": "Benchmark Suite & Performance Profiling" },
+      { "label": "Optimize", "content": "Quantization, Distillation & Pruning" },
+      { "label": "Deploy", "content": "Containerized Serving & Auto-Scaling" },
+      { "label": "Monitor", "content": "Drift Detection & Continuous Retraining" }
+    ],
+    "agents": [],
+    "isReversed": false
+  },
+  {
+    "layerNumber": 2,
+    "sectionId": "rag",
+    "title": "RAG System Architecture",
+    "paragraphs": [
+      "Our Retrieval-Augmented Generation systems go far beyond simple vector search. We architect multi-stage retrieval pipelines with hybrid search strategies, re-ranking layers, and contextual chunking optimized for domain-specific precision.",
+      "Every RAG deployment includes governance frameworks for source attribution, hallucination detection, and compliance-grade audit trails — because enterprise AI must be trustworthy at scale."
+    ],
+    "technologies": ["LangChain", "LlamaIndex", "Pinecone", "Weaviate", "Qdrant", "Elasticsearch", "pgvector", "Cohere Rerank"],
+    "stages": [
+      { "label": "Sources", "content": "Documents, APIs, Databases, Knowledge Graphs" },
+      { "label": "Process", "content": "Semantic Chunking & Metadata Enrichment" },
+      { "label": "Index", "content": "Multi-Vector Embedding & Hybrid Index" },
+      { "label": "Retrieve", "content": "Semantic + Keyword Hybrid Search" },
+      { "label": "Rerank", "content": "Cross-Encoder Re-Ranking & Filtering" },
+      { "label": "Generate", "content": "Context-Injected LLM Response + Citations" }
+    ],
+    "agents": [],
+    "isReversed": true
+  },
+  {
+    "layerNumber": 3,
+    "sectionId": "agents",
+    "title": "Agentic Orchestration via MCP",
+    "paragraphs": [
+      "We design multi-agent ecosystems using the Model Context Protocol (MCP) that transform isolated AI capabilities into coordinated, autonomous workflows. Each agent operates with defined roles, shared context, and governed decision boundaries.",
+      "Our orchestration layer handles task decomposition, inter-agent communication, error recovery, and continuous learning — enabling organizations to automate complex workflows that previously required human coordination."
+    ],
+    "technologies": ["MCP Protocol", "AutoGen", "CrewAI", "LangGraph", "Temporal", "Apache Kafka", "gRPC"],
+    "stages": [
+      { "label": "Orchestr.", "content": "MCP Control Plane & Task Router" },
+      { "label": "Context", "content": "Shared Memory & State Management" },
+      { "label": "Govern", "content": "Policy Enforcement & Audit Trail" }
+    ],
+    "agents": [
+      { "label": "Agent A", "content": "Research & Analysis" },
+      { "label": "Agent B", "content": "Decision Engine" },
+      { "label": "Agent C", "content": "Execution & Action" },
+      { "label": "Agent D", "content": "Validation & QA" }
+    ],
+    "isReversed": false
+  },
+  {
+    "layerNumber": 4,
+    "sectionId": "deployment",
+    "title": "Enterprise Deployment Pipeline",
+    "paragraphs": [
+      "Production AI demands production-grade infrastructure. Our deployment pipeline covers everything from model packaging and containerization to blue-green deployments, canary releases, and automated rollback mechanisms.",
+      "We integrate with existing enterprise CI/CD systems, implement comprehensive observability stacks, and ensure every deployed model meets security, compliance, and performance SLAs before reaching production traffic."
+    ],
+    "technologies": ["Kubernetes", "Docker", "Terraform", "ArgoCD", "Prometheus", "Grafana", "AWS / GCP / Azure", "Triton Inference"],
+    "stages": [
+      { "label": "Build", "content": "Model Packaging & Container Image" },
+      { "label": "Test", "content": "Integration Testing & Security Scan" },
+      { "label": "Stage", "content": "Canary Deployment & A/B Validation" },
+      { "label": "Release", "content": "Blue-Green Production Rollout" },
+      { "label": "Observe", "content": "Metrics, Logging & Alerting Stack" },
+      { "label": "Iterate", "content": "Feedback Loop & Automated Retraining" }
+    ],
+    "agents": [],
+    "isReversed": true
+  }
+]
