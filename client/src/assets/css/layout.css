@@ -1867,3 +1867,98 @@
 [data-theme="light"] .footer {
   background: var(--bg-secondary);
 }
+
+/* ── Headings: white → text-primary in light mode ── */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  color: var(--text-primary);
+}
+
+/* Gradient highlight on hero h1 stays as-is (clip overrides color) */
+
+/* ── Nav links active/hover: white → accent in light mode ── */
+[data-theme="light"] .nav__link:hover,
+[data-theme="light"] .nav__link--active {
+  color: var(--accent-cyan);
+}
+
+/* ── Hero metric values: white → text-primary in light mode ── */
+[data-theme="light"] .hero__metric-value {
+  color: var(--text-primary);
+}
+
+/* ── Vision/mission blockquote ── */
+[data-theme="light"] .vision-mission__block blockquote {
+  color: var(--text-primary);
+}
+
+/* ── Page header text ── */
+[data-theme="light"] .page-header p {
+  color: var(--text-secondary);
+}
+
+/* ── Arch layers in light mode ── */
+[data-theme="light"] .arch-layer {
+  background: rgba(2, 132, 199, 0.04);
+  border-color: rgba(2, 132, 199, 0.1);
+}
+
+/* ── Industry / why items ── */
+[data-theme="light"] .industry-item,
+[data-theme="light"] .why-item {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Case study ── */
+[data-theme="light"] .case-study {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Contact form background ── */
+[data-theme="light"] .contact-form {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(2, 132, 199, 0.12);
+}
+
+/* ── vision mission block ── */
+[data-theme="light"] .vision-mission__block {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* ── Nav: transparent to scrolled transition ── */
+[data-theme="light"] .nav {
+  /* ensure text is visible on transparent nav on light pages */
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .nav__link {
+  color: var(--text-secondary);
+}
+
+/* ── Filter chips ── */
+[data-theme="light"] .filter-chip {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--text-secondary);
+}
+
+/* ── Tech tags ── */
+[data-theme="light"] .tech-tag {
+  background: rgba(2, 132, 199, 0.06);
+  border-color: rgba(2, 132, 199, 0.15);
+  color: var(--text-secondary);
+}
+
+/* ── Funnel steps ── */
+[data-theme="light"] .funnel-progress__step {
+  color: var(--text-muted);
+  border-color: rgba(2, 132, 199, 0.15);
+}
+
+/* ── CTA banner ── */
+[data-theme="light"] .cta-banner::before {
+  background: radial-gradient(ellipse 50% 80% at 50% 50%, rgba(2, 132, 199, 0.06) 0%, transparent 70%);
+}
