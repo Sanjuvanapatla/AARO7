@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import useFetch from '../hooks/useFetch';
 import useScrollReveal from '../hooks/useScrollReveal';
 import Loader from '../components/ui/Loader';
@@ -93,6 +93,8 @@ const CapabilitiesPage = () => {
       'Technical architecture depth across model lifecycle, RAG systems, MCP agent orchestration, and production deployment.',
   });
 
+  const [activeTab, setActiveTab] = useState(0);
+
   const fetchFn = useCallback(
     () =>
       Promise.all([fetchCapabilities(), fetchMcpFeatures()]).then(([capabilities, mcpFeatures]) => ({
@@ -103,49 +105,69 @@ const CapabilitiesPage = () => {
   );
   const { data, loading } = useFetch(fetchFn);
 
-  useScrollReveal([loading]);
+  useScrollReveal([loading, activeTab]);
 
   if (loading) return <Loader />;
 
   const capabilities = data?.capabilities || [];
   const mcpFeatures = data?.mcpFeatures || [];
+  const activeLayer = capabilities[activeTab];
 
   return (
     <>
       <PageHeader
         label="Technical Depth"
         title="Full-Stack AI<br>Architecture Mastery"
-        description="A deep technical breakdown of our engineering capabilities - from foundational model development to enterprise-scale agentic deployment."
+        description="A deep technical breakdown of our engineering capabilities — from foundational model development to enterprise-scale agentic deployment."
       />
 
-      {capabilities.map((layer, index) => (
-        <React.Fragment key={layer._id || layer.layerNumber || index}>
-          <section className="section--tight" id={layer.sectionId}>
-            <div className="container">
-              <div className={`capability-section reveal${layer.isReversed ? ' capability-section--reverse' : ''}`}>
+      {capabilities.length > 0 && (
+        <section className="section--tight">
+          <div className="container">
+            {/* Tab strip */}
+            <div className="cap-tabs" role="tablist" aria-label="Capability layers">
+              {capabilities.map((layer, index) => (
+                <button
+                  key={layer._id || index}
+                  role="tab"
+                  aria-selected={activeTab === index}
+                  className={`cap-tab${activeTab === index ? ' cap-tab--active' : ''}`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  L{String(layer.layerNumber).padStart(2, '0')} — {layer.title}
+                </button>
+              ))}
+            </div>
+
+            {/* Active layer panel */}
+            {activeLayer && (
+              <div
+                key={activeLayer._id || activeTab}
+                className={`capability-section reveal${activeLayer.isReversed ? ' capability-section--reverse' : ''}`}
+                role="tabpanel"
+              >
                 <div className="capability-content">
-                  <span className="label">Layer {String(layer.layerNumber).padStart(2, '0')}</span>
-                  <h3>{layer.title}</h3>
-                  {(layer.paragraphs || []).map((text, textIndex) => (
-                    <p key={textIndex}>{text}</p>
+                  <span className="label">Layer {String(activeLayer.layerNumber).padStart(2, '0')}</span>
+                  <h3>{activeLayer.title}</h3>
+                  {(activeLayer.paragraphs || []).map((text, i) => (
+                    <p key={i}>{text}</p>
                   ))}
                   <div className="tech-list">
-                    {(layer.technologies || []).map((tech, techIndex) => (
-                      <span key={`${tech}-${techIndex}`} className="tech-tag">
+                    {(activeLayer.technologies || []).map((tech, i) => (
+                      <span key={`${tech}-${i}`} className="tech-tag">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
                 <div className="capability-visual">
-                  <CapabilityDiagram layer={layer} />
+                  <CapabilityDiagram layer={activeLayer} />
                 </div>
               </div>
-            </div>
-          </section>
-          {index < capabilities.length - 1 && <Divider />}
-        </React.Fragment>
-      ))}
+            )}
+          </div>
+        </section>
+      )}
 
       <Divider />
 
@@ -154,7 +176,7 @@ const CapabilitiesPage = () => {
           <SectionHeader
             label="Protocol"
             title="The MCP Ecosystem"
-            description="The Model Context Protocol is the backbone of our agentic architecture - enabling seamless communication between AI models, tools, and data sources through a standardized interface layer."
+            description="The Model Context Protocol is the backbone of our agentic architecture — enabling seamless communication between AI models, tools, and data sources through a standardised interface layer."
             center
           />
 
@@ -170,7 +192,10 @@ const CapabilitiesPage = () => {
         </div>
       </section>
 
-      <CtaBanner title="Ready to Explore Our<br>Technical Architecture?" buttonText="Schedule a Technical Deep-Dive" />
+      <CtaBanner
+        title="Ready to Explore Our<br>Technical Architecture?"
+        buttonText="Schedule a Technical Deep-Dive"
+      />
     </>
   );
 };

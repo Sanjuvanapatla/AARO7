@@ -1,6 +1,9 @@
+/* ═══════════════════════════════════════════════
+   1360px — Wide laptop
+═══════════════════════════════════════════════ */
 @media (max-width: 1360px) {
-  .nav__links {
-    gap: 0.85rem;
+  .nav__links--desktop {
+    gap: 0.875rem;
   }
 
   .nav__link {
@@ -12,6 +15,9 @@
   }
 }
 
+/* ═══════════════════════════════════════════════
+   1200px — Small desktop / large tablet
+═══════════════════════════════════════════════ */
 @media (max-width: 1200px) {
   .industries-grid,
   .why-grid {
@@ -23,6 +29,9 @@
   }
 }
 
+/* ═══════════════════════════════════════════════
+   1024px — Tablet landscape
+═══════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .grid--3 {
     grid-template-columns: repeat(2, 1fr);
@@ -55,59 +64,69 @@
   }
 }
 
+/* ═══════════════════════════════════════════════
+   768px — Mobile (major breakpoint)
+═══════════════════════════════════════════════ */
 @media (max-width: 768px) {
+  /* ── Sections ── */
   .section {
-    padding: 5rem 0;
+    padding: 4rem 0;
+  }
+
+  .section--tight {
+    padding: 3rem 0;
   }
 
   .container {
     padding: 0 1.25rem;
   }
 
-  .nav__links {
+  /* ── Nav: hide desktop links, show hamburger ── */
+  .nav__links--desktop {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10, 14, 26, 0.98);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    z-index: 999;
-  }
-
-  .nav__links--open {
-    display: flex;
-  }
-
-  .nav__links .nav__link {
-    font-size: 1.125rem;
   }
 
   .nav__mobile-toggle {
     display: flex;
+    gap: 6px;
     z-index: 1001;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
   }
 
-  .nav__cta--desktop {
-    display: none;
-  }
-
+  /* ── Hero ── */
   .hero {
     min-height: auto;
-    padding: 8rem 0 4rem;
+    padding: 7rem 0 3.5rem;
   }
 
+  .hero__subtitle {
+    font-size: 1.0625rem;
+  }
+
+  .hero__body {
+    font-size: 0.9375rem;
+  }
+
+  /* metrics: 2-column grid instead of column stack */
   .hero__metrics {
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
   }
 
+  .hero__metric-value {
+    font-size: 1.625rem;
+  }
+
+  /* ── Grids ── */
   .vision-mission {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .grid--2,
@@ -117,17 +136,71 @@
     grid-template-columns: 1fr;
   }
 
-  .industries-grid,
+  /* Industries — horizontal scroll carousel */
+  .industries-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.875rem;
+    padding-bottom: 0.75rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .industries-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .industry-item {
+    flex: 0 0 150px;
+    min-width: 150px;
+    padding: 1.5rem 1rem;
+  }
+
+  /* Why grid — 2 column */
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
+  /* ── Filter bar: horizontal scroll ── */
+  .filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    margin: 0 -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-chip {
+    flex-shrink: 0;
+  }
+
+  /* ── Contact ── */
   .contact-layout {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
+  .contact-form {
+    padding: 2rem 1.5rem;
+  }
+
+  /* ── Case studies ── */
   .case-study__header {
     flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
   }
 
   .case-study__body {
@@ -136,44 +209,135 @@
 
   .case-study__phase {
     border-right: none;
+    padding: 1.5rem;
   }
 
+  .case-study__toggle {
+    padding: 0.875rem 1.5rem;
+  }
+
+  /* ── Forms ── */
   .form-row {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
+  /* ── Footer ── */
   .footer__inner {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .footer__bottom {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
     text-align: center;
   }
 
+  /* ── Buttons ── */
   .btn-group {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem;
   }
 
+  /* ── Assessment ── */
   .assessment-grid {
     grid-template-columns: 1fr;
   }
 
+  /* ── CTA Banner ── */
+  .cta-banner {
+    padding: 4rem 1.5rem;
+  }
+
+  /* ── Page header ── */
+  .page-header {
+    padding: 7.5rem 0 3rem;
+  }
+
+  /* ── Assistant widget ── */
   .assistant {
     right: 0.75rem;
     bottom: 0.75rem;
   }
+
+  .assistant__panel {
+    width: min(340px, calc(100vw - 1.5rem));
+  }
+
+  /* ── Capability tabs ── */
+  .cap-tab {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.7rem;
+  }
+
+  /* ── Vision/Mission blocks ── */
+  .vision-mission__block {
+    padding: 2rem 1.5rem;
+  }
+
+  /* ── Cards ── */
+  .card {
+    padding: 1.75rem 1.5rem;
+  }
 }
 
+/* ═══════════════════════════════════════════════
+   480px — Smallest phones
+═══════════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .industries-grid,
-  .why-grid {
-    grid-template-columns: 1fr;
+  .hero__metrics {
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero__label {
     font-size: 0.6875rem;
+  }
+
+  /* Why grid stacks to 1 column */
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-item {
+    flex: 0 0 130px;
+    min-width: 130px;
+  }
+
+  .case-study__header {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .case-study__toggle {
+    padding: 0.75rem 1.25rem;
+  }
+
+  .case-study__phase {
+    padding: 1.25rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  /* Ensure all tap targets are at least 44px */
+  .btn,
+  .filter-chip,
+  .cap-tab,
+  .nav__accordion-toggle,
+  .nav__drawer-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__drawer-link {
+    display: block;
+    padding: 0.9rem 0;
   }
 }
