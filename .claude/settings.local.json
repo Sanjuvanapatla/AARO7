@@ -3,7 +3,8 @@
     "allow": [
       "Bash(dir:*)",
       "Bash(git init:*)",
-      "Bash(git remote add:*)"
+      "Bash(git remote add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: AARO7 full-stack MERN application\n\n- Fix case studies filter: scroll reveal now re-initializes on filter change\n- Add subtle AI network background pattern to fintech solution page\n- Includes complete frontend \\(React 18, React Router v6\\) and backend \\(Express, Mongoose\\)\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }

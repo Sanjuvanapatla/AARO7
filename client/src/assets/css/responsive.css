@@ -27,6 +27,11 @@
   .footer__inner {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* Tools strip — 2 columns on smaller desktops */
+  .tools-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ═══════════════════════════════════════════════
@@ -62,6 +67,25 @@
   .case-study__phase:nth-child(2) {
     border-right: none;
   }
+
+  /* Service horizontal layout stacks on tablet */
+  .service-h {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-h__right {
+    padding-left: 0;
+    border-left: none;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  /* VM row stacks */
+  .vm-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* ═══════════════════════════════════════════════
@@ -74,6 +98,10 @@
   }
 
   .section--tight {
+    padding: 3rem 0;
+  }
+
+  .section--compact {
     padding: 3rem 0;
   }
 
@@ -136,7 +164,7 @@
     grid-template-columns: 1fr;
   }
 
-  /* Industries — horizontal scroll carousel */
+  /* Industries — horizontal scroll carousel (legacy) */
   .industries-grid {
     display: flex;
     flex-wrap: nowrap;
@@ -160,7 +188,7 @@
     padding: 1.5rem 1rem;
   }
 
-  /* Why grid — 2 column */
+  /* Why grid — 2 column (legacy) */
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -272,7 +300,7 @@
     font-size: 0.7rem;
   }
 
-  /* ── Vision/Mission blocks ── */
+  /* ── Vision/Mission blocks (legacy) ── */
   .vision-mission__block {
     padding: 2rem 1.5rem;
   }
@@ -280,6 +308,81 @@
   /* ── Cards ── */
   .card {
     padding: 1.75rem 1.5rem;
+  }
+
+  /* ═══════════════════════════════════════════════
+     NEW COMPONENTS — Mobile responsive
+  ═══════════════════════════════════════════════ */
+
+  /* Tab panel — scroll horizontal */
+  .tab-panel__nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -1.25rem;
+    padding: 0 1.25rem 0.5rem;
+  }
+
+  .tab-panel__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-panel__btn {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  /* Tools strip — single column on mobile */
+  .tools-strip {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .tool-card {
+    padding: 1rem;
+  }
+
+  /* Content engine inline — stack on mobile */
+  .content-engine-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .content-engine-inline__text {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .content-engine-inline .btn-group {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  /* Industries strip — edge-to-edge scroll */
+  .industries-strip {
+    margin: 0 -1.25rem;
+    padding: 0 1.25rem 0.5rem;
+  }
+
+  /* Why strip — smaller cards on mobile */
+  .why-card {
+    flex: 0 0 240px;
+    min-width: 240px;
+    padding: 1.25rem 1rem;
+  }
+
+  .why-strip {
+    margin: 0 -1.25rem;
+    padding: 0 1.25rem 0.5rem;
+  }
+
+  /* Service card horizontal — stack */
+  .service-h {
+    padding: 1.5rem;
   }
 }
 
@@ -295,7 +398,7 @@
     font-size: 0.6875rem;
   }
 
-  /* Why grid stacks to 1 column */
+  /* Why grid stacks to 1 column (legacy) */
   .why-grid {
     grid-template-columns: 1fr;
   }
@@ -329,6 +432,7 @@
   .btn,
   .filter-chip,
   .cap-tab,
+  .tab-panel__btn,
   .nav__accordion-toggle,
   .nav__drawer-link {
     min-height: 44px;
@@ -339,5 +443,21 @@
   .nav__drawer-link {
     display: block;
     padding: 0.9rem 0;
+  }
+
+  /* Why cards smaller on phone */
+  .why-card {
+    flex: 0 0 220px;
+    min-width: 220px;
+  }
+
+  .content-engine-inline .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content-engine-inline .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
