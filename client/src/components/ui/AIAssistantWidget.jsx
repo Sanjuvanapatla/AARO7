@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import { sendAssistantMessage } from '../../services/assistantService';
 
@@ -118,7 +119,14 @@ const AIAssistantWidget = () => {
   };
 
   return (
-    <div className={`assistant${open ? ' assistant--open' : ''}`} ref={assistantRef}>
+    <>
+      {/* Full-screen blurred backdrop — portaled to body so it's behind everything except the panel */}
+      {open && ReactDOM.createPortal(
+        <div className="assistant__backdrop" aria-hidden="true" />,
+        document.body
+      )}
+
+      <div className={`assistant${open ? ' assistant--open' : ''}`} ref={assistantRef}>
       {open ? (
         <div className="assistant__panel">
           <div className="assistant__header">
@@ -187,6 +195,7 @@ const AIAssistantWidget = () => {
         Ask AARO7
       </button>
     </div>
+    </>
   );
 };
 

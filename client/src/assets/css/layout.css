@@ -1679,3 +1679,191 @@
 .case-study__details--open {
   max-height: 2000px;
 }
+
+/* ═══════════════════════════════════════════════
+   ASSISTANT — FULL-SCREEN BACKDROP
+═══════════════════════════════════════════════ */
+.assistant__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1095; /* below assistant panel (1100) */
+  cursor: pointer;
+}
+
+/* panel sits above backdrop */
+.assistant__panel {
+  position: relative;
+  z-index: 1101;
+  background: var(--surface-assistant);
+  border: 1px solid var(--border-accent);
+}
+
+/* ═══════════════════════════════════════════════
+   THEME TOGGLE BUTTON
+═══════════════════════════════════════════════ */
+.nav__theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.nav__theme-toggle:hover {
+  border-color: var(--border-accent);
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+}
+
+.nav__theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+}
+
+/* Drawer theme toggle */
+.nav__drawer-theme {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.nav__drawer-theme button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-left: auto;
+}
+
+.nav__drawer-theme button:hover {
+  border-color: var(--border-accent);
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+}
+
+.nav__drawer-theme svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.75;
+}
+
+/* ═══════════════════════════════════════════════
+   LIGHT MODE — hardcoded color overrides
+═══════════════════════════════════════════════ */
+
+/* Nav */
+[data-theme="light"] .nav--scrolled {
+  background: var(--surface-nav);
+  border-bottom-color: rgba(2, 132, 199, 0.12);
+}
+
+[data-theme="light"] .nav__logo {
+  color: var(--logo-color);
+}
+
+[data-theme="light"] .nav__logo-mark {
+  color: #ffffff;
+}
+
+[data-theme="light"] .nav__mobile-toggle span {
+  background: var(--text-primary);
+}
+
+/* Dropdown */
+[data-theme="light"] .nav__dropdown {
+  background: var(--surface-dropdown);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(2, 132, 199, 0.08);
+}
+
+[data-theme="light"] .nav__dropdown::before {
+  background: var(--surface-dropdown);
+}
+
+/* Drawer */
+[data-theme="light"] .nav__drawer {
+  background: var(--surface-drawer);
+  border-left-color: rgba(2, 132, 199, 0.12);
+}
+
+/* Body background */
+[data-theme="light"] body {
+  background: var(--bg-primary);
+}
+
+/* Cards in light mode */
+[data-theme="light"] .card {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .card::before {
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+}
+
+/* Hero canvas background hidden in light (too dark) */
+[data-theme="light"] .global-bg canvas {
+  opacity: 0.15;
+}
+
+[data-theme="light"] .global-bg__gradient {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(2, 132, 199, 0.04) 0%, transparent 70%),
+    linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
+}
+
+/* Forms */
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea,
+[data-theme="light"] .form-group select {
+  background: #ffffff;
+  border-color: rgba(2, 132, 199, 0.2);
+  color: var(--text-primary);
+}
+
+/* Assistant */
+[data-theme="light"] .assistant__toggle {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(2, 132, 199, 0.35);
+}
+
+[data-theme="light"] .assistant__message--assistant {
+  background: rgba(2, 132, 199, 0.06);
+  border-color: rgba(2, 132, 199, 0.15);
+}
+
+[data-theme="light"] .assistant__form input {
+  background: #f8fafc;
+  border-color: rgba(2, 132, 199, 0.2);
+  color: var(--text-primary);
+}
+
+/* Footer */
+[data-theme="light"] .footer {
+  background: var(--bg-secondary);
+}
